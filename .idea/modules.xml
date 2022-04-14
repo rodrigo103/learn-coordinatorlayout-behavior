@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/behaviorlearn.iml" filepath="$PROJECT_DIR$/behaviorlearn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/learn-coordinatorlayout-behavior.iml" filepath="$PROJECT_DIR$/.idea/modules/learn-coordinatorlayout-behavior.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/learn-coordinatorlayout-behavior.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/learn-coordinatorlayout-behavior.app.iml" />
     </modules>
   </component>
 </project>
