@@ -1,12 +1,14 @@
 package com.example.learn.business
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import com.example.learn.BaseActivity
+import android.support.v7.app.AppCompatActivity
 import com.example.learn.R
 import com.example.learn.log
 import kotlinx.android.synthetic.main.merchant_activity.*
 
-class MerchantActivity : BaseActivity() {
+@SuppressLint("Registered")
+class MerchantActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
