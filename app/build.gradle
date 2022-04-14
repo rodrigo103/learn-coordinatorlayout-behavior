@@ -5,7 +5,6 @@ apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion ANDROID_SUPPORT_VERSION
     defaultConfig {
         applicationId "com.example.learn"
         minSdkVersion 16
