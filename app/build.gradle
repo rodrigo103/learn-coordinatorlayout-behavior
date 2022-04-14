@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION as int
@@ -14,10 +15,6 @@ android {
         flavorDimensions VERSION_CODE
 
         multiDexEnabled true
-
-        ndk {
-            abiFilters 'armeabi'
-        }
     }
     buildTypes {
         release {
@@ -56,7 +53,7 @@ dependencies {
     implementation rootProject.ext.kotlin_stdlib
     implementation rootProject.ext.kotlin_anko_common
     implementation rootProject.ext.glide
-    annotationProcessor rootProject.ext.glide_compiler
+    kapt rootProject.ext.glide_compiler
     implementation rootProject.ext.glide_transformations
     implementation rootProject.ext.list_pull_to_refresh
     implementation rootProject.ext.list_adapter
