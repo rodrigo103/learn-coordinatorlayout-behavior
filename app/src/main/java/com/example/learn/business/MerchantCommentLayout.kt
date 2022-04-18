@@ -4,20 +4,22 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
-import com.example.learn.R
-import kotlinx.android.synthetic.main.merchant_page_cell_layout.view.*
+import com.example.learn.databinding.MerchantPageCellLayoutBinding
 
 class MerchantCommentLayout(context: Context) : FrameLayout(context), ScrollableViewProvider {
+
+    private var binding: MerchantPageCellLayoutBinding =
+        MerchantPageCellLayoutBinding.inflate(LayoutInflater.from(context), this, true)
+
     override fun getScrollableView(): View {
-        return vRecycler
+        return binding.vRecycler
     }
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.merchant_page_cell_layout, this)
         initialData()
     }
 
     private fun initialData() {
-        vRecycler.setBackgroundColor(0xFFEFEFEF.toInt())
+        binding.vRecycler.setBackgroundColor(0xFFEFEFEF.toInt())
     }
 }

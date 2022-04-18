@@ -7,25 +7,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import com.example.learn.R
-import kotlinx.android.synthetic.main.merchant_page_layout.view.*
+import com.example.learn.databinding.MerchantPageLayoutBinding
 
 class MerchantPageLayout(context: Context, attrs: AttributeSet?) : LinearLayout(context, attrs) {
     lateinit var pagerAdapter: MerchantPageAdapter
 
-    init {
-        LayoutInflater.from(context).inflate(R.layout.merchant_page_layout, this)
-    }
+    private var binding: MerchantPageLayoutBinding =
+        MerchantPageLayoutBinding.inflate(LayoutInflater.from(context), this, true)
 
     override fun onFinishInflate() {
         super.onFinishInflate()
         pagerAdapter = MerchantPageAdapter(context)
-        vPager.adapter = pagerAdapter
-        vSmartTab.setViewPager(vPager)
+        binding.vPager.adapter = pagerAdapter
+        binding.vSmartTab.setViewPager(binding.vPager)
     }
 
     fun canScrollVertically(): Boolean {
-        val view = (pagerAdapter.getItem(vPager.currentItem) as ScrollableViewProvider).getScrollableView()
+        val view = (pagerAdapter.getItem(binding.vPager.currentItem) as ScrollableViewProvider).getScrollableView()
         return view.canScrollVertically(-1)
     }
 }

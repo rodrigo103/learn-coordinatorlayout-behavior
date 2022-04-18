@@ -8,6 +8,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import com.example.learn.R
+import com.example.learn.databinding.MerchantSettleLayoutBinding
 import com.example.learn.dp
 import com.example.learn.view.stateRefresh
 import com.example.learn.view.stateSave
@@ -19,7 +20,7 @@ class MerchantSettleLayout(context: Context, attrs: AttributeSet?) : ConstraintL
     private var effected: Float = 0f
 
     init {
-        LayoutInflater.from(context).inflate(R.layout.merchant_settle_layout, this)
+        MerchantSettleLayoutBinding.inflate(LayoutInflater.from(context), this)
     }
 
     private fun animViews(): Array<View> = arrayOf(this)
