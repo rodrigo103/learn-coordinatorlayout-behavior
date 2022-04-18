@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/merchant_offset"
-        app:layout_behavior="@string/view_behavior_merchant_page" />
+        app:layout_behavior="com.example.learn.business.MerchantPageBehavior" />
 
     <com.example.learn.business.MerchantTitleLayout
         android:id="@+id/layTitle"
