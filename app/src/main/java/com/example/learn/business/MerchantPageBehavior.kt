@@ -11,7 +11,6 @@ import com.example.learn.R
 import com.example.learn.argbEvaluator
 import com.example.learn.dp
 import com.example.learn.view.ViewPager2
-import kotlinx.android.synthetic.main.merchant_page_layout.view.*
 
 class MerchantPageBehavior(context: Context, attrs: AttributeSet) : CoordinatorLayout.Behavior<MerchantPageLayout>(context, attrs) {
     private lateinit var selfView: MerchantPageLayout
@@ -114,7 +113,7 @@ class MerchantPageBehavior(context: Context, attrs: AttributeSet) : CoordinatorL
 
         if ((child.translationY < 0 || (child.translationY == 0F && dy > 0)) && !child.canScrollVertically()) {
             val effect = layTitle.effectByOffset(dy)
-            selfView.vSmartTab.setBackgroundColor(argbEvaluator.evaluate(effect, Color.WHITE, 0xFFFAFAFA.toInt()) as Int)
+            selfView.binding.vSmartTab.setBackgroundColor(argbEvaluator.evaluate(effect, Color.WHITE, 0xFFFAFAFA.toInt()) as Int)
             val transY = -simpleTopDistance * effect
             if (transY != child.translationY) {
                 child.translationY = transY

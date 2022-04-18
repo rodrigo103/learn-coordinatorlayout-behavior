@@ -12,7 +12,7 @@ import com.example.learn.databinding.MerchantPageLayoutBinding
 class MerchantPageLayout(context: Context, attrs: AttributeSet?) : LinearLayout(context, attrs) {
     lateinit var pagerAdapter: MerchantPageAdapter
 
-    private var binding: MerchantPageLayoutBinding =
+    var binding: MerchantPageLayoutBinding =
         MerchantPageLayoutBinding.inflate(LayoutInflater.from(context), this, true)
 
     override fun onFinishInflate() {
