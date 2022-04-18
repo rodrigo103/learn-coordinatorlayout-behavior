@@ -37,9 +37,9 @@ class MerchantPageAdapter(context: Context) : PagerAdapter() {
     override fun isViewFromObject(view: View, `object`: Any): Boolean = view == `object`
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) = container.removeView(`object` as View)
     override fun getPageTitle(position: Int): CharSequence = when (position) {
-        0 -> "点菜"
-        1 -> "评论(9999+)"
-        2 -> "商家"
+        0 -> "Order"
+        1 -> "Comments (9999+)"
+        2 -> "Business"
         else -> ""
     }
 

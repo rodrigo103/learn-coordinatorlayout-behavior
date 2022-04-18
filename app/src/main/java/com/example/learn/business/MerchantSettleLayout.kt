@@ -16,7 +16,7 @@ import com.example.learn.view.statesChangeByAnimation
 
 class MerchantSettleLayout(context: Context, attrs: AttributeSet?) : ConstraintLayout(context, attrs) {
     private var firstLayout: Boolean = false
-    private var isExpanded = false // layContent 内容是否展开查看中
+    private var isExpanded = false // Whether the content of layContent is being expanded and viewed
     private var effected: Float = 0f
 
     init {
@@ -34,7 +34,7 @@ class MerchantSettleLayout(context: Context, attrs: AttributeSet?) : ConstraintL
         }
     }
 
-    // 效果简单实现，具体内容应该根据业务动态计算变化高度区间。
+    // The effect is simple to achieve, and the specific content should dynamically calculate the change height interval according to the business.
     fun effectByOffset(transY: Float) {
         effected = when {
             transY <= dp(110) -> 0F
@@ -49,7 +49,7 @@ class MerchantSettleLayout(context: Context, attrs: AttributeSet?) : ConstraintL
             return
         }
 
-        isExpanded = expanded // 目标
+        isExpanded = expanded // Target
         val start = effected
         val end = if (expanded) 1F else 0F
         statesChangeByAnimation(animViews(), R.id.vs1, R.id.vs2, start, end,
