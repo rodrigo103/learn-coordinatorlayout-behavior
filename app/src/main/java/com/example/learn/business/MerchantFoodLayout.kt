@@ -13,9 +13,9 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.BaseViewHolder
 import com.chad.library.adapter.base.entity.MultiItemEntity
 import com.example.learn.*
+import com.example.learn.databinding.MerchantPageFoodLayoutBinding
 import com.oushangfeng.pinnedsectionitemdecoration.PinnedHeaderItemDecoration
 import com.oushangfeng.pinnedsectionitemdecoration.utils.FullSpanUtil
-import kotlinx.android.synthetic.main.merchant_page_food_layout.view.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
@@ -25,36 +25,40 @@ class MerchantFoodLayout(context: Context) : FrameLayout(context), ScrollableVie
     var topHeight: Int = 0
     var recommendHeight: Int = 0
 
+    private var binding: MerchantPageFoodLayoutBinding =
+        MerchantPageFoodLayoutBinding.inflate(LayoutInflater.from(context), this, true)
+
     init {
-        LayoutInflater.from(context).inflate(R.layout.merchant_page_food_layout, this)
         initialData()
     }
 
     private fun initialData() {
         val foodAdapter = FoodAdapter(Data.foodDetails())
-        vRecycler.addItemDecoration(PinnedHeaderItemDecoration.Builder(FoodAdapter.TYPE_TITLE)
+        binding.vRecycler.addItemDecoration(PinnedHeaderItemDecoration.Builder(FoodAdapter.TYPE_TITLE)
                 .setDividerId(R.drawable.transparent)
                 .create())
 
-        vRecycler.adapter = foodAdapter
+        binding.vRecycler.adapter = foodAdapter
         foodAdapter.openLoadAnimation()
 
-        vRecycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+        binding.vRecycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             var totalDy = 0
 
             override fun onScrolled(recyclerView: RecyclerView?, dx: Int, dy: Int) {
                 totalDy -= dy
                 val transY = if (totalDy > -(topHeight + recommendHeight)) totalDy else -(topHeight + recommendHeight)
-                vSide.translationY = transY.toFloat()
+                binding.vSide.translationY = transY.toFloat()
             }
         })
 
-        vSide.isNestedScrollingEnabled = false
-        vSide.adapter = SideAdapter(Data.foodMenus())
+        binding.vSide.apply {
+            isNestedScrollingEnabled = false
+            adapter = SideAdapter(Data.foodMenus())
+        }
     }
 
     override fun getScrollableView(): View {
-        return vRecycler
+        return binding.vRecycler
     }
 
     override fun onAttachedToWindow() {
@@ -82,12 +86,14 @@ class MerchantFoodLayout(context: Context) : FrameLayout(context), ScrollableVie
     }
 
     private fun adjustSideLayoutPosition() {
-        val lp = (vSide.layoutParams as MarginLayoutParams)
+        val lp = (binding.vSide.layoutParams as MarginLayoutParams)
         if (lp.topMargin != topHeight + recommendHeight) {
             lp.topMargin = topHeight + recommendHeight
             lp.height = screenHeight() - resDimension(R.dimen.title_height) - resDimension(R.dimen.merchant_tab_height)
-            vSide.layoutParams = lp
-            vSide.anim(android.R.anim.fade_in, View.VISIBLE)
+            binding.vSide.apply {
+                layoutParams = lp
+                anim(android.R.anim.fade_in, View.VISIBLE)
+            }
         }
     }
 }
