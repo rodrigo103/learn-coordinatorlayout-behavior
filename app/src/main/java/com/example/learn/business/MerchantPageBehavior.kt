@@ -11,6 +11,7 @@ import com.example.learn.R
 import com.example.learn.argbEvaluator
 import com.example.learn.dp
 import com.example.learn.view.ViewPager2
+import kotlin.math.abs
 
 class MerchantPageBehavior(context: Context, attrs: AttributeSet) : CoordinatorLayout.Behavior<MerchantPageLayout>(context, attrs) {
     private lateinit var selfView: MerchantPageLayout
@@ -95,7 +96,7 @@ class MerchantPageBehavior(context: Context, attrs: AttributeSet) : CoordinatorL
         }
 
         verticalPagingTouch += dy
-        if (vPager.isScrollable && Math.abs(verticalPagingTouch) > pagingTouchSlop) {
+        if (vPager.isScrollable && abs(verticalPagingTouch) > pagingTouchSlop) {
             vPager.isScrollable = false // 屏蔽 pager横向滑动干扰
         }
 
@@ -103,7 +104,7 @@ class MerchantPageBehavior(context: Context, attrs: AttributeSet) : CoordinatorL
         if (R.id.vRecommends == target.id) {
             if (!isScrollRecommends) {
                 consumed[0] = dx
-                if (vPager.isScrollable && Math.abs(horizontalPagingTouch) > pagingTouchSlop) isScrollRecommends = true
+                if (vPager.isScrollable && abs(horizontalPagingTouch) > pagingTouchSlop) isScrollRecommends = true
             }
             if (isScrollRecommends) {
                 consumed[1] = dy
