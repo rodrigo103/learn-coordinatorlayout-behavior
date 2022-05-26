@@ -3,7 +3,7 @@ package com.example.learn.view;
 
 import android.content.Context;
 import android.graphics.Typeface;
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;

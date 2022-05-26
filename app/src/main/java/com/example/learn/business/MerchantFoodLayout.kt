@@ -2,7 +2,7 @@ package com.example.learn.business
 
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,7 +44,7 @@ class MerchantFoodLayout(context: Context) : FrameLayout(context), ScrollableVie
         binding.vRecycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             var totalDy = 0
 
-            override fun onScrolled(recyclerView: RecyclerView?, dx: Int, dy: Int) {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 totalDy -= dy
                 val transY = if (totalDy > -(topHeight + recommendHeight)) totalDy else -(topHeight + recommendHeight)
                 binding.vSide.translationY = transY.toFloat()

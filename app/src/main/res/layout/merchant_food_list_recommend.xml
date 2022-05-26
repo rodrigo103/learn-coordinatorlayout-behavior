@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:paddingBottom="10dp">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/vRecommends"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,5 +14,5 @@
         android:overScrollMode="never"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 </com.example.learn.business.MyEventLayout>

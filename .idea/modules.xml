@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/learn-coordinatorlayout-behavior.iml" filepath="$PROJECT_DIR$/.idea/modules/learn-coordinatorlayout-behavior.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/learn-coordinatorlayout-behavior.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/learn-coordinatorlayout-behavior.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/learn-coordinatorlayout-behavior.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/learn-coordinatorlayout-behavior.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/learn-coordinatorlayout-behavior.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/learn-coordinatorlayout-behavior.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/learn-coordinatorlayout-behavior.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/learn-coordinatorlayout-behavior.app.unitTest.iml" />
     </modules>
   </component>
 </project>

@@ -3,7 +3,7 @@ package com.example.learn.business
 import android.animation.Animator
 import android.content.Context
 import android.graphics.Color
-import android.support.design.widget.CoordinatorLayout
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import android.util.AttributeSet
 import android.view.View
 import android.widget.Scroller
@@ -14,17 +14,17 @@ import com.example.learn.view.ViewPager2
 
 class MerchantPageBehavior(context: Context, attrs: AttributeSet) : CoordinatorLayout.Behavior<MerchantPageLayout>(context, attrs) {
     private lateinit var selfView: MerchantPageLayout
-    private lateinit var layTitle: MerchantTitleLayout // 商店标题
-    private lateinit var vPager: ViewPager2 // 商品菜单所在pager
-    private lateinit var layContent: MerchantContentLayout // 商店详情
+    private lateinit var layTitle: MerchantTitleLayout // store title
+    private lateinit var vPager: ViewPager2 // The pager where the product menu is located
+    private lateinit var layContent: MerchantContentLayout // store details
     private lateinit var laySettle: MerchantSettleLayout
     private val pagingTouchSlop = dp(5)
-    private var horizontalPagingTouch = 0 // 菜单横项列表(推荐商品)内容的触摸滑动距离
+    private var horizontalPagingTouch = 0 // The touch sliding distance of the menu horizontal item list (recommended products) content
     private var isScrollRecommends = false
-    private var verticalPagingTouch = 0 // 菜单竖项列表(商品，评价，商家)内容的触摸滑动距离
+    private var verticalPagingTouch = 0 // The touch sliding distance of the menu vertical item list (products, reviews, businesses) content
     private var simpleTopDistance = 0
-    private var isScrollToFullFood = false // 上滑显示商品菜单
-    private var isScrollToHideFood = false // 下滑显示商店详情
+    private var isScrollToFullFood = false // Scroll up to display the product menu
+    private var isScrollToHideFood = false // scroll down to show store details
     private val scroller = Scroller(context)
     private val scrollDuration = 800
     private val handler = android.os.Handler()
@@ -57,7 +57,7 @@ class MerchantPageBehavior(context: Context, attrs: AttributeSet) : CoordinatorL
 
     override fun onLayoutChild(parent: CoordinatorLayout, child: MerchantPageLayout, layoutDirection: Int): Boolean {
         selfView = child
-        vPager = child.findViewById(R.id.vPager)
+        vPager = child.binding.vPager
 
         val lp = selfView.layoutParams as CoordinatorLayout.LayoutParams
         if (lp.height == CoordinatorLayout.LayoutParams.MATCH_PARENT) {
@@ -70,10 +70,10 @@ class MerchantPageBehavior(context: Context, attrs: AttributeSet) : CoordinatorL
     }
 
     override fun layoutDependsOn(parent: CoordinatorLayout, child: MerchantPageLayout, dependency: View): Boolean {
-        when {
-            dependency.id == R.id.layTitle -> layTitle = dependency as MerchantTitleLayout
-            dependency.id == R.id.layContent -> layContent = (dependency as MerchantContentLayout).apply { animListener = mAnimListener }
-            dependency.id == R.id.laySettle -> laySettle = dependency as MerchantSettleLayout
+        when (dependency.id) {
+            R.id.layTitle -> layTitle = dependency as MerchantTitleLayout
+            R.id.layContent -> layContent = (dependency as MerchantContentLayout).apply { animListener = mAnimListener }
+            R.id.laySettle -> laySettle = dependency as MerchantSettleLayout
             else -> return false
         }
         return true

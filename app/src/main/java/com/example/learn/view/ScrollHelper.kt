@@ -1,7 +1,7 @@
 package com.example.learn.view
 
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.learn.log
 
 
@@ -18,11 +18,11 @@ object ScrollHelper {
         recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             private var scrollDown = false
 
-            override fun onScrolled(vRecycler: RecyclerView?, dx: Int, dy: Int) {
+            override fun onScrolled(vRecycler: RecyclerView, dx: Int, dy: Int) {
                 scrollDown = if (layoutManager.reverseLayout) dy < 0 else dy > 0
             }
 
-            override fun onScrollStateChanged(vRecycler: RecyclerView?, newState: Int) {
+            override fun onScrollStateChanged(vRecycler: RecyclerView, newState: Int) {
                 when (newState) {
                     RecyclerView.SCROLL_STATE_IDLE -> {
                         val lastVisibleItem = layoutManager.findLastCompletelyVisibleItemPosition()
@@ -51,11 +51,11 @@ object ScrollHelper {
         recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             private var scrollDown = false
 
-            override fun onScrolled(vRecycler: RecyclerView?, dx: Int, dy: Int) {
+            override fun onScrolled(vRecycler: RecyclerView, dx: Int, dy: Int) {
                 scrollDown = if (layoutManager.reverseLayout) dy < 0 else dy > 0
             }
 
-            override fun onScrollStateChanged(vRecycler: RecyclerView?, newState: Int) {
+            override fun onScrollStateChanged(vRecycler: RecyclerView, newState: Int) {
                 when (newState) {
                     RecyclerView.SCROLL_STATE_IDLE -> {
                         val firstVisibleItem = layoutManager.findFirstCompletelyVisibleItemPosition()
