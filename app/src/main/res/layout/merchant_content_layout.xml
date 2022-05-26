@@ -10,6 +10,7 @@
         android:layout_height="128dp"
         android:contentDescription="@string/app_name"
         android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
@@ -29,7 +30,6 @@
         android:id="@+id/laySimple"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="@+id/vCover"
@@ -52,7 +52,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="6dp"
             android:layout_marginEnd="@dimen/edge"
-            android:layout_marginRight="@dimen/edge"
             android:ellipsize="end"
             android:singleLine="true"
             android:text="公告：本店已切换电子发票，如需开票请扫描账..."
