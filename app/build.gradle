@@ -73,7 +73,6 @@ dependencies {
     implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:$list_adapter"
     implementation "org.greenrobot:eventbus:$eventbus"
 
-    implementation files('libs/overscroll-release-v1.1-20160904.jar')
     implementation 'com.oushangfeng:PinnedSectionItemDecoration:1.2.4'
     implementation 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
     implementation 'com.hyman:flowlayout-lib:1.1.1'
