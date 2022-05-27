@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -33,6 +34,7 @@
         android:singleLine="true"
         android:textColor="#D04443"
         android:textSize="12dp"
+        tools:text="领￥"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,6 +55,7 @@
             android:layout_marginStart="12dp"
             android:textColor="#FFF"
             android:textSize="20dp"
+            tools:text="￥"
             app:layout_constraintBottom_toTopOf="@id/vDetail2"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -66,6 +69,7 @@
             android:layout_marginStart="12dp"
             android:textColor="#FFF"
             android:textSize="11dp"
+            tools:text="满 可用"
             app:layout_constraintBottom_toTopOf="@id/vDetail3"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/vDetail1" />
@@ -78,6 +82,7 @@
             android:layout_marginStart="12dp"
             android:textColor="#FFF"
             android:textSize="11dp"
+            tools:text="有效期至"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/vDetail2" />
