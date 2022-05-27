@@ -16,6 +16,7 @@
         android:layout_marginRight="@dimen/edge"
         android:contentDescription="@string/app_name"
         app:layout_constraintDimensionRatio="780:242"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

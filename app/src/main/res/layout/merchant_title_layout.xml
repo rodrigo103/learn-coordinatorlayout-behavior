@@ -41,6 +41,8 @@
         android:layout_height="@dimen/title_height"
         android:contentDescription="@string/app_name"
         android:scaleType="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:src="@mipmap/back_white" />
 
     <ImageView
@@ -49,6 +51,7 @@
         android:layout_height="@dimen/title_height"
         android:contentDescription="@string/app_name"
         android:src="@mipmap/icon_menu"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
 
@@ -58,6 +61,7 @@
         android:layout_height="@dimen/title_height"
         android:contentDescription="@string/app_name"
         android:src="@mipmap/icon_together"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/vMenu" />
 
     <ImageView
@@ -66,6 +70,7 @@
         android:layout_height="@dimen/title_height"
         android:contentDescription="@string/app_name"
         android:src="@mipmap/icon_collection"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/vTogether" />
 
     <ImageView
@@ -76,6 +81,7 @@
         android:layout_marginRight="1dp"
         android:contentDescription="@string/app_name"
         android:src="@mipmap/icon_search"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/vCollection" />
 
 
