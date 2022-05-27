@@ -160,11 +160,11 @@ class MerchantPageBehavior(context: Context, attrs: AttributeSet) : CoordinatorL
         val defaultDisplayHeight = (selfView.height - simpleTopDistance)
         if (defaultDisplayHeight * 0.4F > selfView.translationY) {
             scroller.startScroll(0, selfView.translationY.toInt(), 0, (-selfView.translationY).toInt(), scrollDuration)
-            layContent.switch(false, true)
+            layContent.switch(expanded = false, byScrollerSlide = true)
             laySettle.switch(false)
         } else {
             scroller.startScroll(0, selfView.translationY.toInt(), 0, (defaultDisplayHeight - selfView.translationY).toInt(), scrollDuration)
-            layContent.switch(true, true)
+            layContent.switch(expanded = true, byScrollerSlide = true)
             laySettle.switch(true)
         }
         handler.post(flingRunnable)

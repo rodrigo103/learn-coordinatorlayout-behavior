@@ -43,7 +43,7 @@
             android:layout_marginBottom="3dp"
             android:text="鲜粥道（小熊熬粥）"
             android:textColor="#FFF"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
@@ -56,7 +56,7 @@
             android:singleLine="true"
             android:text="公告：本店已切换电子发票，如需开票请扫描账..."
             android:textColor="#C8C8C8"
-            android:textSize="11dp" />
+            android:textSize="11sp" />
 
         <LinearLayout
             android:id="@+id/vMerchantTip2"
@@ -75,7 +75,7 @@
                 android:singleLine="true"
                 android:text="''味道赞''"
                 android:textColor="#F7D180"
-                android:textSize="11dp" />
+                android:textSize="11sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -86,7 +86,7 @@
                 android:singleLine="true"
                 android:text="''服务好''"
                 android:textColor="#F7D180"
-                android:textSize="11dp" />
+                android:textSize="11sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -97,7 +97,7 @@
                 android:singleLine="true"
                 android:text="''包装好''"
                 android:textColor="#F7D180"
-                android:textSize="11dp" />
+                android:textSize="11sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -108,7 +108,7 @@
                 android:singleLine="true"
                 android:text="''分量足''"
                 android:textColor="#F7D180"
-                android:textSize="11dp" />
+                android:textSize="11sp" />
 
         </LinearLayout>
 
@@ -146,7 +146,7 @@
                 android:gravity="center"
                 android:text="鲜粥道（小熊熬粥）"
                 android:textColor="#333"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -199,7 +199,7 @@
                 android:gravity="center"
                 android:text="减"
                 android:textColor="#FFF"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layTicket" />
 
@@ -214,7 +214,7 @@
                 android:gravity="center_vertical"
                 android:text="满25减15；满49减20；满79减22"
                 android:textColor="#333"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toRightOf="@+id/vt1"
                 app:layout_constraintRight_toLeftOf="@id/vSwitch"
                 app:layout_constraintTop_toBottomOf="@id/layTicket"
@@ -229,7 +229,7 @@
                 android:orientation="horizontal"
                 android:text="5个活动"
                 android:textColor="#9A9A9A"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 app:layout_constraintRight_toLeftOf="@id/vSwitchIcon"
                 app:layout_constraintTop_toTopOf="@id/vt1" />
 
@@ -258,7 +258,7 @@
                 android:gravity="center"
                 android:text="领"
                 android:textColor="#FFF"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/vt111" />
 
@@ -274,7 +274,7 @@
                 android:gravity="center_vertical"
                 android:text="有机会领取商家代金券"
                 android:textColor="#333"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toRightOf="@+id/vt2"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/vt1"
@@ -292,7 +292,7 @@
                 android:gravity="center"
                 android:text="返"
                 android:textColor="#FFF"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/vt222" />
 
@@ -308,7 +308,7 @@
                 android:gravity="center_vertical"
                 android:text="实际支付27元返2元商家代金券"
                 android:textColor="#333"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toRightOf="@+id/vt3"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/vt2"
@@ -326,7 +326,7 @@
                 android:gravity="center"
                 android:text="首"
                 android:textColor="#FFF"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/vt333" />
 
@@ -342,7 +342,7 @@
                 android:gravity="center_vertical"
                 android:text="新用户立减26元，首次使用美团支付最高再减3元！首次使用美团支付最高再减3元！首次使用美团支付最高再减3元！"
                 android:textColor="#333"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toRightOf="@+id/vt4"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/vt3"
@@ -360,7 +360,7 @@
                 android:gravity="center"
                 android:text="赠"
                 android:textColor="#FFF"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/vt444" />
 
@@ -376,7 +376,7 @@
                 android:gravity="center_vertical"
                 android:text="满52元赠送酸辣豇豆"
                 android:textColor="#333"
-                android:textSize="12dp"
+                android:textSize="12sp"
                 app:layout_constraintLeft_toRightOf="@+id/vt5"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/vt4"
@@ -420,7 +420,7 @@
                     android:singleLine="true"
                     android:text="''味道赞''"
                     android:textColor="#333"
-                    android:textSize="11dp" />
+                    android:textSize="11sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -433,7 +433,7 @@
                     android:singleLine="true"
                     android:text="''包装好''"
                     android:textColor="#333"
-                    android:textSize="11dp" />
+                    android:textSize="11sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -446,7 +446,7 @@
                     android:singleLine="true"
                     android:text="''配送速度快''"
                     android:textColor="#333"
-                    android:textSize="11dp" />
+                    android:textSize="11sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -459,7 +459,7 @@
                     android:singleLine="true"
                     android:text="''分量足''"
                     android:textColor="#333"
-                    android:textSize="11dp" />
+                    android:textSize="11sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -472,7 +472,7 @@
                     android:singleLine="true"
                     android:text="''价格实惠''"
                     android:textColor="#333"
-                    android:textSize="11dp" />
+                    android:textSize="11sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -485,7 +485,7 @@
                     android:singleLine="true"
                     android:text="''服务好''"
                     android:textColor="#333"
-                    android:textSize="11dp" />
+                    android:textSize="11sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -498,7 +498,7 @@
                     android:singleLine="true"
                     android:text="''人品好''"
                     android:textColor="#333"
-                    android:textSize="11dp" />
+                    android:textSize="11sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -511,7 +511,7 @@
                     android:singleLine="true"
                     android:text="''粥不错''"
                     android:textColor="#333"
-                    android:textSize="11dp" />
+                    android:textSize="11sp" />
 
 
             </com.zhy.view.flowlayout.FlowLayout>
