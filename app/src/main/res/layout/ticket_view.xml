@@ -12,7 +12,8 @@
         android:contentDescription="@string/app_name"
         android:src="@mipmap/ticket_1"
         app:layout_constraintDimensionRatio="98:40"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:id="@+id/vBorder2"
@@ -22,7 +23,8 @@
         android:contentDescription="@string/app_name"
         android:src="@mipmap/ticket_2"
         app:layout_constraintDimensionRatio="98:40"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/vSimple"
@@ -35,7 +37,7 @@
         android:textColor="#D04443"
         android:textSize="12sp"
         tools:text="领￥"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,21 +46,23 @@
         android:layout_height="match_parent"
         android:alpha="0"
         android:scaleX="0"
-        android:scaleY="0">
+        android:scaleY="0"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <TextView
             android:id="@+id/vDetail1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
             android:layout_marginStart="12dp"
+            android:layout_marginBottom="4dp"
             android:textColor="#FFF"
             android:textSize="20sp"
-            tools:text="￥"
             app:layout_constraintBottom_toTopOf="@id/vDetail2"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="￥" />
 
         <TextView
             android:id="@+id/vDetail2"
@@ -67,10 +71,10 @@
             android:layout_marginStart="12dp"
             android:textColor="#FFF"
             android:textSize="11sp"
-            tools:text="满 可用"
             app:layout_constraintBottom_toTopOf="@id/vDetail3"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/vDetail1" />
+            app:layout_constraintTop_toBottomOf="@id/vDetail1"
+            tools:text="满 可用" />
 
         <TextView
             android:id="@+id/vDetail3"
@@ -79,10 +83,10 @@
             android:layout_marginStart="12dp"
             android:textColor="#FFF"
             android:textSize="11sp"
-            tools:text="有效期至"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/vDetail2" />
+            app:layout_constraintTop_toBottomOf="@id/vDetail2"
+            tools:text="有效期至" />
 
         <TextView
             android:layout_width="wrap_content"
